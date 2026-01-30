@@ -10,4 +10,9 @@ export default defineConfig({
     port: 5173,
     https: true, // Enable HTTPS
   },
+  preview: {
+    host: '0.0.0.0', // Listen on all network interfaces
+    port: 4173,
+    https: true, // Enable HTTPS
+  },
 })

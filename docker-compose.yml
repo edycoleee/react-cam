@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  react-cam:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: react-cam-app
+    ports:
+      - "4173:4173"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - react-cam-network
+
+networks:
+  react-cam-network:
+    driver: bridge
